@@ -9,7 +9,7 @@ int main()
 	{
 		if (P == 0 || Q == 0)
 		{
-			printf("Wrong input");
+			printf("%d and %d are NOT CO-PRIME NUMBERS.", P, Q);
 			return 0;
 		}
 
