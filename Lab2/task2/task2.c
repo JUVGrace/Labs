@@ -10,6 +10,13 @@ int main()
 	{
 		for (i = 1; i < n; i++)
 		{
+			j = i+1;
+			if (i * i * i + j * j * j == n)
+				k++;
+		}
+		
+		for (i = 1; i < n; i++)
+		{
 			j = 0;
 			if (i * i * i + j * j * j == n)
 				k++;
