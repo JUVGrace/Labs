@@ -8,7 +8,7 @@ int main()
 	int n;
 	int array[100];
 	printf("Input the length of the array\n");
-	while (scanf_s("%d", &n) != 1 || n < 1 || n>100)
+	while (scanf_s("%d", &n) != 1 || n < 1 || n>100 || getchar() != '\n')
 	{
 		printf("Wrong input\n");
 		rewind(stdin);

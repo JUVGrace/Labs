@@ -8,7 +8,7 @@ int main()
 	int n;
 	int A[100];
 	printf("Input the length of the array\n");
-	while (scanf_s("%d", &n) != 1 || n < 1 || n>100)
+	while (scanf_s("%d", &n) != 1 || n < 1 || n>100 || getchar() != '\n')
 	{
 		printf("Wrong input\n");
 		rewind(stdin);
@@ -37,7 +37,12 @@ int main()
 		for (int i = 0; i < n; i++)
 		{
 			A[i] = rand() % 30-15;
-			printf("%d\n", A[i]);
+			if (A[i]==0)
+			{
+				i--;
+			}
+			else
+				printf("%d\n", A[i]);
 		}
 
 	}

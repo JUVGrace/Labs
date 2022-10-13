@@ -8,15 +8,15 @@ int main()
 	int n;
 	float array[100];
 	printf("Input the length of the array\n");
-	while(scanf_s("%d", &n)!=1||n<1||n>100||getchar()!='\n')
+	while (scanf_s("%d", &n) != 1 || n < 1 || n>100 || getchar() != '\n')
 	{
 		printf("Wrong input\n");
 		rewind(stdin);
 	}
-	
-	
+
+
 	printf("Enter 1 if you want keyboard input or 2 if you want random input\n");
-	while(scanf_s("%d", &choice)!=1 ||(choice!=1 && choice!=2) || getchar() != '\n');
+	while (scanf_s("%d", &choice) != 1 || (choice != 1 && choice != 2) || getchar() != '\n');
 	{
 		printf("Wrong input\n");
 		rewind(stdin);
@@ -32,7 +32,7 @@ int main()
 				rewind(stdin);
 			}
 		}
-	 
+
 
 	}
 	else if (choice == 2)
@@ -40,7 +40,7 @@ int main()
 		srand(time(NULL));
 		for (int i = 0; i < n; i++)
 		{
-			(float) array[i] = rand() % 10 - 5;
+			(float)array[i] = rand() % 10 - 5;
 			printf("%f\n", array[i]);
 		}
 
@@ -56,7 +56,7 @@ int main()
 
 	float max = array[0];
 	float min = array[0];
-	int mx=1, mn=1;
+	int mx = 1, mn = 1;
 
 	for (int i = 0; i < n; i++)
 	{
@@ -75,7 +75,7 @@ int main()
 	float mult = 1;
 	if (mn > mx)
 	{
-		for (int i = mx+1; i < mn; i++)
+		for (int i = mx + 1; i < mn; i++)
 		{
 			mult *= array[i];
 		}
@@ -88,6 +88,6 @@ int main()
 		}
 	}
 	printf("mult=%.2f sum=%.2f", mult, sum);
-	
+
 	return 0;
 }

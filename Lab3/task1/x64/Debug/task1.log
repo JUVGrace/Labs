@@ -1,4 +1,4 @@
 ﻿  task1.c
-C:\VISUALST\Labs\Lab3\task1\task1.c(36,9): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\VISUALST\Labs\Lab3\task1\task1.c(39,35): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\VISUALST\Labs\Lab3\task1\task1.c(40,9): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\VISUALST\Labs\Lab3\task1\task1.c(43,35): warning C4244: =: преобразование "int" в "float", возможна потеря данных
   task1.vcxproj -> C:\VISUALST\Labs\Lab3\x64\Debug\task1.exe
