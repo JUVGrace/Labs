@@ -16,7 +16,12 @@ int main()
 
 
 	printf("Enter 1 if you want keyboard input or 2 if you want random input\n");
-	scanf_s("%d", &choice);
+	while (scanf_s("%d", &choice) != 1 || (choice != 1 && choice != 2) || getchar() != '\n')
+	{
+		printf("Wrong input\n");
+		rewind(stdin);
+	}
+
 	if (choice == 1)
 	{
 		printf("Input %d elements\n", n);
@@ -36,7 +41,7 @@ int main()
 		srand(time(NULL));
 		for (int i = 0; i < n; i++)
 		{
-			A[i] = rand() % 30-15;
+			A[i] = (rand() % 30 - 15);
 			if (A[i]==0)
 			{
 				i--;
@@ -46,11 +51,7 @@ int main()
 		}
 
 	}
-	else
-	{
-		printf("Wrong input");
-		return 0;
-	}
+	
 
 	int temp;
 
